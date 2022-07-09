@@ -2,7 +2,7 @@ let admin;
 name = "Джон";
 let name;
 admin = name;
-alert( admin );
+alert( admin )
 
 let earth;
 let currentUser = "Текущий пользователь";
