@@ -6,3 +6,4 @@ alert( admin );
 
 let earth;
 let currentUser = "Текущий пользователь";
+
