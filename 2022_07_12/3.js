@@ -11,3 +11,4 @@ const reverseSeq = n => {
   };
 
   reverseSeq(7); 
+  //for (let i = n; i >= 1; i--) 
