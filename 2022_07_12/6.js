@@ -5,8 +5,8 @@
 
 
 function XO(str) {
-    return console.log( str.replaceAll("x", "").length == str.replaceAll("o", "").length);
+    return str.replaceAll(/x/gi, "").length == str.replaceAll(/o/gi, "").length;
 }
 
 
-XO("xx2oo2")
+console.log(XO("Xoxxoo"))
