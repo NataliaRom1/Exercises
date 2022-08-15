@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Уроки по JS</title>
+    <style>
+        td[data-cell-red="#CC0000"] {
+            background: #CC0000;
+        }
+        td[data-cell-red="light-red"] {
+            background: #FF9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="comm" deflt="значение">Сообщения</div> -->
+    <!-- <input id="input" type="checkbox" checked> checkbox -->
+    <table><tr>
+        <td data-cell-red="#CC0000">1</td>
+        <td data-cell-blue="#0000CC">2</td>
+        <td data-cell-red="#CC0000">3</td>
+        <td data-cell-blue="#0000CC">4</td>
+    </tr>
+    <tr>
+        <td data-cell-blue="#0000CC">5</td>
+        <td data-cell-red="#CC0000">6</td>
+        <td data-cell-blue="#0000CC">7</td>
+        <td data-cell-red="#CC0000">8</td>
+    </tr></table>
+
+    <script>
+        // let div = document.getElementById("comm");
+        // console.log( div.getAttribute("deflt"));
+        // div.setAttribute("deflt", "новое значение");
+        // console.log( div.getAttribute("deflt"));
+
+        // for(let val of div.attributes)
+        // console.log(val);
+        
+        // let inp = document.getElementById("input");
+        // console.log( typeof inp.checked );
+        let flSkip = false;
+        for(let cell of document.querySelectorAll('[data-cell-red]')){
+            if(!flSkip) cell.dataset.cellRed = 'light-red';
+            flSkip = !flSkip;
+        
+            
+            // let attr = cell.getAttribute('cell-red');
+            // cell.style.background = attr;
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- Напишите код для выбора элемента с атрибутом data-widget-name из документа и прочитайте его значение. -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+    // получам элемент
+    let elem = document.querySelector('[data-widget-name]'); 
+
+    // читаем значение
+    console.log(elem.getAttribute('data-widget-name'));
+    // console.log(elem.dataset.widgetName);
+    
+  </script>
+</body>
+</html>
