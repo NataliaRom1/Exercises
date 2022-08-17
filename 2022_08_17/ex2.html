@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Уроки по JS</title>
+</head>
+<style>
+.message {
+    position: absolute;
+    width: 200px;
+    background: #eee;
+    padding: 10px;
+}
+.message.ex{
+    color: #0000CC;
+}
+</style>
+<body>   
+    <div class="message ex">Важная информация!</div>
+    <script>
+// let elem = document.querySelector("div");
+
+// elem.classList.add("ex");
+// elem.classList.remove("ex");
+
+
+
+// for(let cl of elem.classList)
+// console.log(cl); //просмотр всех классов
+
+
+
+
+// //переместим div на несколько пикселей на экране браузера
+// let elem = document.querySelector("div");
+// let coordY = 0;
+// let idMove = setInterval(function() {
+//     coordY +=5;//увеличиваем координату тега div на 5 px
+//     elem.style.top = coordY+"px";//присваиваем тукущую координату по y
+// }, 50);//каждые 50 млсек будет вызываться эта функция
+// setTimeout(()=>clearInterval(idMove),3000);//останавливает его через 3 секунды
+
+
+
+
+// let elem = document.querySelector("div");
+// let idMove = setInterval(function() {
+//     if(!elem.style.display) elem.style.display = "none";
+//     else elem.style.display = "";
+// }, 100);//функция вызывается каждые 100млс; проверяем свойство display, т.е. показывается или нет в окне браузера. Если показывается (св-во дисплей не пустое), то мы присваиваем ему значение none, иначе мы сбрасываем none  и это св-во показывается в окне браузера.
+// setTimeout(()=>clearInterval(idMove),3000);//останавливает его через 3 секунды
+
+
+
+// let elem = document.querySelector("div");
+// elem.style.cssText = `color:red; font-size: 18px; background-color:green` //присвоили стили
+
+
+//посмотрим свойство ширина
+let elem = document.querySelector("div");
+let objStyles = getComputedStyle(elem);
+console.log(objStyles.width);
+
+    </script>
+</body>
