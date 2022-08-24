@@ -1,0 +1,28 @@
+<!-- Задача . Изменение текста в инпуте -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Блокирование полей ввода</title>
+ </head>
+ <body>
+
+<button onclick="buttonClick1()">Заблокировать</button>
+<button onclick="buttonClick2()">Разблокировать</button>
+<input type="text" value="Какой-то текст!" id="input">
+
+<script>
+    let input = document.getElementById('input');
+
+    function buttonClick1() {
+    input.disabled = true;
+  }
+
+    function buttonClick2() {
+    input.disabled = false;
+  }
+  
+</script>
+
+ </body> 
+</html>

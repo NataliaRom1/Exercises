@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>По нажатию на кнопку меняется ее текст</title>
+</head>
+<body>
+    <!-- <button onclick="buttonClick()" id="button">Нажми на меня</button> -->
+    <input type="button" onclick="buttonClick(this)" value="Нажми на меня">
+    <script>
+        function buttonClick(elem) {
+            elem.value = "Новый текст";
+        }
+
+        // function buttonClick() {
+        //     let button = document.getElementById('button');
+        //     // button.value = "Новый текст";
+        //     button.innerHTML = "Новый текст";
+        // }
+    </script>
+</body>
+</html>

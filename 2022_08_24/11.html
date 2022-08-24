@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Смена текста в инпуте</title>
+ </head>
+ <body>
+
+    <input type="text" value="Какой-то текст" id="input">
+    <button onclick="buttonClick()">Нажми на меня</button>
+    <script>
+        function buttonClick() {
+            let input = document.getElementById('input');
+            input.value = "Ой, новый текст"
+        }
+    </script>
+ </body> 
+</html>
