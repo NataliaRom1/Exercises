@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title></title>
+ </head>
+ <body>
+<p>Это input type="submit".</p>
+<input type="submit" value="Нажми на меня!" id="input" onclick="buttonClick(this)" style="width:300px">
+<script>
+    function buttonClick(elem) {
+        // №10
+    // let input = document.getElementById('input');
+        // №11
+    // elem.value="Ку-ку!!";
+        // №12
+    elem.value="Больше не нажать";
+    elem.disabled = true;
+}
+
+
+</script>
+
+ </body> 
+</html>

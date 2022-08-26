@@ -1,0 +1,25 @@
+<!-- Вывод содержимого инпута -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title></title>
+ </head>
+ <body>
+
+<input type="text" value="Нажми на меня!" id="input" onclick="buttonClick(this)"
+onblur="buttonNotClick(this)" style="width:400px">
+<script>
+    function buttonClick(elem) {
+    // let input = document.getElementById('input');
+    elem.value="Ой, я поменял текст!";
+}
+function buttonNotClick(elem) {
+    // let input = document.getElementById('input');
+    elem.value="Ой, я поменял текст опять!";
+}
+
+</script>
+
+ </body> 
+</html>
