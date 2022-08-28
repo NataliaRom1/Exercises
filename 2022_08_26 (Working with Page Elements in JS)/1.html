@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Изменение текста в span</title>
+</head>
+<body>
+    <input type="button" onclick="buttonClick()" value="Нажми на меня!">
+    <span id="span">Это span с текстом.</span>
+    <script>
+        function buttonClick() {
+            let span = document.getElementById('span');
+            span.innerHTML = 'Новый текст!'
+        }
+    </script>
+    
+</body>
+</html>

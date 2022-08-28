@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Замена span на тег b без изменения текста</title>
+</head>
+<body>
+    <input type="button" value="Нажми на меня" onclick="buttonClick()">
+    <span id="span">Это span с текстом.</span>
+    <script>
+        function buttonClick() {
+            let span = document.getElementById('span');
+            span.outerHTML = '<b>' + span.innerHTML + '</b>';
+        }
+    </script>
+</body>
+</html>
