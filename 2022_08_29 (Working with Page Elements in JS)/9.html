@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Свойства innerHTML, outerHTML</title>
+</head>
+<body>
+    <!-- <p id="element"> При нажатии на кнопку абзац станет h3, но текст останется. </p>   -->
+    <input id="input1" type="text" value=""> 
+    + 
+    <input id="input2" type="text" value=""> 
+    =
+    <span id="result">?</span>
+    <br>
+    <br>
+    <input type="submit" onclick="func()" value="Нажмите чтобы сложить">
+    <script>
+        function func() {
+            let result = document.getElementById('result');
+            let input1 = document.getElementById('input1');
+            let input2 = document.getElementById('input2');
+           
+            result.innerHTML = +input1.value + +input2.value;        
+        }
+    </script>
+</body>
+</html>

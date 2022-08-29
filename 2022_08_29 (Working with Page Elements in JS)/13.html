@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Задачи</title>
+</head>
+<body>
+
+    <input id="input" type="text" value="" onkeyup="func()" > 
+    <span id="result"></span>
+
+    <script>
+        function func() {
+            let result = document.getElementById('result');
+            let input = document.getElementById('input');
+
+           
+            result.innerHTML = +input.value;        
+        }
+    </script>
+</body>
+</html>

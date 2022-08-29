@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Методы setAttribute, getAttribute, removeAttribute, hasAttribute</title>
+    <style>
+        .my-class {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p id="p" class="my-class">Абзац с class="my-class". Класс задает класный цвет.</p>
+    <input type="button" onclick="func1()" style="width:300px" value="Нажми - и я выведу класс абзаца.">
+    <br>
+    <br>
+    <input type="button" onclick="del()" style="width:300px" value="Нажми - и я удалю атрибут class для абзаца.">
+
+    <script>
+        let elem = document.getElementById('p');
+        function func1() {
+            alert(elem.getAttribute('class'));
+        }
+        function del() {
+            elem.removeAttribute('class');
+            alert('Класс удален! Нажмите на первую кнопку чтобы проверить это!')
+        }
+    </script>
+    
+</body>
+</html>

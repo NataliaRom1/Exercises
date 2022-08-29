@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Свойства innerHTML, outerHTML</title>
+</head>
+<body>
+    <p id="element"> При нажатии на кнопку текст в абзаце поменяется. </p>   
+    <input type="submit" onclick="func()" value="Нажмите на меня!" style="width:200px">
+    <script>
+        function func() {
+            let element = document.getElementById('element');
+            element.outerHTML = '<h3>' + 'Абзац превратился в h3!' + '</h3>';
+        //    element.innerHTML = 'Ку-ку! А я <b>жирный</b>!'
+        }
+    </script>
+</body>
+</html>

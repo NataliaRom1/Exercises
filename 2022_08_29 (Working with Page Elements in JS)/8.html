@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Свойства innerHTML, outerHTML</title>
+</head>
+<body>
+    <p id="element"> При нажатии на кнопку абзац станет h3, но текст останется. </p>   
+    <input type="submit" onclick="func()" value="Нажмите на меня!" style="width:200px">
+    <script>
+        function func() {
+            let element = document.getElementById('element');
+            element.outerHTML = '<h3>' + element.innerHTML + '</h3>';
+        
+        }
+    </script>
+</body>
+</html>

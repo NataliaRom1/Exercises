@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Методы setAttribute, getAttribute, removeAttribute, hasAttribute</title>
+</head>
+<body>
+    <p id="p" class="my-class">Абзац с class="my-class".</p>
+    <input type="button" onclick="func()" value="Нажми - и я выведу класс абзаца.">
+
+    <script>
+        function func() {
+            let elem = document.getElementById('p');
+            alert(elem.getAttribute('class'));
+        }
+    </script>
+    
+</body>
+</html>
