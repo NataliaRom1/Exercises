@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+</head>
+<body>
+    <button id="btn1">КНОПКА 1</button>
+
+
+    <script>
+        let btn1 = document.querySelector('#btn1');
+
+        btn1.onclick = btn1Click;
+         
+
+        btn1.addEventListener('click',() => {
+            console.log('Нажали на кнопку 1 addEventListener');
+        });
+        btn1.removeEventListener('click',() => {
+            console.log('Нажали на кнопку 1 addEventListener');
+        });
+        
+        btn1.addEventListener('click', btn1Click2);
+        btn1.removeEventListener('click', btn1Click2);
+
+       function btn1Click() {
+        console.log('Нажали на кнопку 1');
+       }
+
+       function btn1Click2() {
+        console.log('Нажали на кнопку 1-2');
+       }      
+    </script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let btn2 = document.querySelector('#btn2');
+        btn2.addEventListener('click', () => {
+            console.log('Нажали на кнопку 2');
+        });
+        })
+    </script>
+    <button id="btn2">КНОПКА 2</button>
+
+    <a id="btn3" href="https://ya.ru">КНОПКА 3</a>
+
+    <script>
+        let btn3 = document.querySelector('#btn3');
+        
+        btn3.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log('event =',event)
+            console.log('Нажали на кнопку 3');
+        });
+
+    </script>
+    <form id="yaForm" action="https://ya.ru">
+        <input type="text">
+        <button type="submit">SUBMIT</button>
+    </form>
+    <script>
+        let yaForm = document.querySelector('#yaForm');
+        yaForm.addEventListener('submit', event => {
+            event.preventDefault();
+        });
+    </script>
+
+
+<style>
+    .box1 {
+        padding: 20px;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+    .box2 {
+        position: relative;
+        left:400px;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+</style>
+
+
+<div class="box1">
+    box1
+    <div class="box2">box2</div>
+</div>
+<script>
+    let box1 = document.querySelector('.box1');
+    let box2 = document.querySelector('.box2');
+
+    
+    box1.addEventListener('click', event => {
+        console.log('НАЖАЛИ НА КРАСНЫЙ');
+        console.log('event.target =',event.target);
+        console.log('event.currentTarget =',event.currentTarget);
+    });
+    box2.addEventListener('click', event => {
+        // event.stopPropagation();
+        console.log('НАЖАЛИ НА ЗЕЛЕНЫЙ');
+        console.log('event.target =',event.target);
+        console.log('event.currentTarget =',event.currentTarget);
+    });
+</script>
+
+
+
+<style>
+ul,li {
+    padding: 25px;
+    border: 2px solid black;
+}
+</style>
+
+<ul class="list">
+    <li>Картошка</li>
+    <li>Бананы</li>
+</ul>
+
+<script>
+// ДЕЛИГИРОВАНИЕ
+let list = document.querySelector('.list'); //ul
+let listItems = list.querySelectorAll('li');
+
+// for (let li of listItems) {
+//     li.addEventListener('click', event => {
+//         event.target.style.textDecoration = 'line-through';
+//     });
+//  }
+
+list.addEventListener('click', event => {
+    console.log('event.target.tagName =', event.target.tagName);
+    if (event.target.tagName ==='LI') {
+        event.target.style.textDecoration = 'line-through';
+    }
+});
+
+list.insertAdjacentHTML('beforeEnd','<li>Мандрины</li>')
+</script>
+
+<script>
+    let user = {
+        firstName: 'Филипп',
+        lastName: 'Киркоров',
+        age: 50,
+        friend: 'Алла Пугачёва',
+    }
+// let firstName = user.firstName;
+// let lastName = user.lastName;
+let { firstName, lastName, ...rest } = user;
+
+console.log('firstName =',firstName);
+console.log('lastName =',lastName);
+console.log('rest =', rest);
+console.log(user === rest);
+
+// function showFirstName(userObj) {
+//     console.log('userObj.firstName =',userObj.firstName);
+// }
+
+function showFirstName({ firstName, lastName, ...rest }) {
+    console.log('userObj.firstName =',firstName);
+}
+showFirstName(user);
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body> 
+</html>
