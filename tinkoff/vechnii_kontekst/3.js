@@ -12,16 +12,18 @@ function documents(str1, str2, num) {
   //начинаю идти с этажа торопящегося сотрудника
   let start = +arr2.splice(x - 1, 1); //получаю номер стартового этажа и удаляю его из массива этажей
  
-  let max = Math.max.apply(null, arr2);
-  let min = Math.min.apply(null, arr2);
-  // let max = arr2[0];
-  // let min = arr2[arr2.length -1];
+  // let max = Math.max.apply(null, arr2);
+  // let min = Math.min.apply(null, arr2);
+  let min = arr2[0];
+  let max = arr2[arr2.length - 1];
+  
+  console.log(max,min)
 
 
   if (t >= (max - start) || t >= (start - min)) {
     res = max - min;
   } else {
-    if ((max - min + max - start) < (max - min + start - min)) {
+    if ((max - start) < (start - min)) {
       res = (max - min + max - start);
     } else {
       res = (max - min + start - min);

@@ -1,21 +1,21 @@
-var readline = require('readline');
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+let mobile = function (line1) {
+  let arr = line1.split("  ");
+  let A = +arr[0];
+  let B = +arr[1];
+  let C = +arr[2];
+  let D = +arr[3];
+  console.log(A, B, C, D);
 
-let res = 0;
-rl.on("line", function (str) {
-  let arr = str.split(" ");
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] = +arr[i];
-  }
-  if (arr[3] <= arr[1]) {
-    res = arr[0];
+  // for (let i = 0; i < arr.length; i++) {
+  //   arr[i] = +arr[i];
+  // }
+  if (D <= B) {
+    res = A;
   } else {
-    res = arr[0] + (arr[3] - arr[1]) * arr[2];
+    res = A + (D - B) * C;
   }
-  rl.close(); 
-});
+  return res;
+}
 
-
-rl.on("close", () => {
-  console.log(res);
-});
+console.log(mobile('100  10  12  15'));
+console.log(mobile('100  10  12  1'));
