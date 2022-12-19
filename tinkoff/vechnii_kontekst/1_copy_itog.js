@@ -15,6 +15,7 @@ function v1() {
 }
 
 function mobile(line1) {
+  let res = 0;
   let arr = line1.split("  ");
   let A = +arr[0];
   let B = +arr[1];
