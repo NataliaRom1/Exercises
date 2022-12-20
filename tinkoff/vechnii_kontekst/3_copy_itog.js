@@ -1,5 +1,5 @@
-const readline = require("readline");
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout, });
+var readline = require("readline");
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
 // Накапливаем строки в список
 function v1() {
@@ -17,9 +17,13 @@ function v1() {
 
 
 function logic(line1, line2, line3) {
-  let arr1 = line1.split("  ");
-  let arr2 = line2.split("  ");
-  let arr3 = line3.split("  ");
+  let arr1 = line1.split(" ").map(num => +num);
+  let arr2 = line2.split(" ").map(num => +num);
+  let arr3 = line3.split(" ").map(num => +num);
+
+  // for (let i = 0; i < arr2.length; i++) {
+  //   arr2[i] = +arr2[i];
+  // }
 
   let n = arr1[0]; //количество сотрудников
   let t = arr1[1]; //когда уходит торопящийся
@@ -36,7 +40,7 @@ function logic(line1, line2, line3) {
   if (t >= (max - start) || t >= (start - min)) {
     res = max - min;
   } else {
-    if ((max - min + max - start) < (max - min + start - min)) {
+    if ((max - start) < (start - min)) {
       res = (max - min + max - start);
     } else {
       res = (max - min + start - min);

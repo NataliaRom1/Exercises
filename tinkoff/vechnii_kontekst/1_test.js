@@ -1,24 +1,21 @@
 var readline = require('readline');
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-
-function v1() {
-  const lines = [];
-  rl.on("line", line => {
-    if (line.length == 0) return;
-    lines.push(line);
-    if (lines.length >= 1) {
-      mobile(lines[0]);
-      rl.close;
-    }
-  });
+async function v3() {
+  // задаем вопрос и получаем ответ
+  const read = (query) => new Promise((resolve) => rl.question(query, resolve));
+  //  read('').then(async (a) => {
+  const l1 = await read('');
+  mobile(l1);
+  rl.close();
+  //  });
   rl.on('close', () => process.exit(0));
 }
 
-function mobile(line1) {
+
+function mobile(l1) {
   let res = 0;
-  let arr = line1.split(" ");
-  console.log(arr)
+  let arr = l1.split("  ");
   let A = +arr[0];
   let B = +arr[1];
   let C = +arr[2];
@@ -33,4 +30,4 @@ function mobile(line1) {
   console.log(res);
 }
 
-v1();
+v3();
