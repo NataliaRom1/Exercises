@@ -11,7 +11,7 @@
 function generateHashtag(str) {
   let res = "";
   let arr = [];
-  // добавить проверку
+  // str = str.replace(/[^a-zA-ZА-Яа-яЁё]/g, ' ').replace(/\s+/g, ' ').trim() для массива
   if (typeof str !== "string" || /\t/.test(str) || /\n/.test(str) ) {
     return false;
   } else {
