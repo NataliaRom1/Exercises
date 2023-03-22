@@ -10,7 +10,8 @@ function documents(str1, str2, num) {
   }
 
   //начинаю идти с этажа торопящегося сотрудника
-  let start = +arr2.splice(x - 1, 1); //получаю номер стартового этажа и удаляю его из массива этажей
+  let start = +arr2[x-1]; //получаю номер стартового этажа и удаляю его из массива этажей
+  console.log(arr2, start);
  
   // let max = Math.max.apply(null, arr2);
   // let min = Math.min.apply(null, arr2);

@@ -31,7 +31,7 @@ function logic(line1, line2, line3) {
   let res = 0;
 
   //начинаю идти с этажа торопящегося сотрудника
-  let start = +arr2.splice(x - 1, 1); //получаю номер стартового этажа и удаляю его из массива этажей
+  let start = arr2[x - 1]; //получаю номер стартового этажа
 
   let min = arr2[0];
   let max = arr2[arr2.length - 1];
@@ -42,7 +42,8 @@ function logic(line1, line2, line3) {
   } else {
     if ((max - start) < (start - min)) {
       res = (max - min + max - start);
-    } else {
+    }
+    else {
       res = (max - min + start - min);
     }
   }
